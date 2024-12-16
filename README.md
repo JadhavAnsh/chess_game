@@ -1,4 +1,4 @@
-# myapp
+# Chess Game App
 
 A new Flutter project.
 
