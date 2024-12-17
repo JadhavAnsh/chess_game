@@ -5,15 +5,17 @@ import 'package:myapp/values/colors.dart';
 class Squares extends StatelessWidget {
   final bool isWhite;
   final ChessPiece? piece;
+  final bool isValidMove;
   final bool isSelected;
   final void Function()? onTap;
-  const Squares(
-      {super.key,
-      required this.isWhite,
-      required this.piece,
-      required this.isSelected,
-      required this.onTap,
-      });
+  const Squares({
+    super.key,
+    required this.isWhite,
+    required this.piece,
+    required this.isSelected,
+    required this.onTap,
+    required this.isValidMove,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +23,10 @@ class Squares extends StatelessWidget {
     //if selected, square is green
     if (isSelected) {
       squareColor = Colors.green;
+    }
+    //if valid move, square is lighter shade of green
+    else if(isValidMove) {
+      squareColor = Colors.green[300];
     }
     //otherwise, it's white or black
     else {
