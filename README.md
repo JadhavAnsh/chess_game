@@ -55,12 +55,12 @@ A feature-rich chess application built using Flutter. This project aims to provi
 ```plaintext
 chess_game/
 |- lib/
-|  |- components/       # components like square which has the gird view for the gameboard and the piece model
+|  |- components/  # components like square which has the gird view for the gameboard and the piece model
 |  |- helper/      # some loogic for indexing the pieces on the game board
 |  |- images/      # images of the chess pieces
-|  |- values/        # Colors for the foreground, background
+|  |- values/      # Colors for the foreground, background
 |  |-game_board.dart   # Game Board is the main screen
-|  |- main.dart     # Entry point of the application
+|  |- main.dart    # Entry point of the application
 ```
 
 ## Contributions
