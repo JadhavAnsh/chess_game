@@ -9,12 +9,11 @@ A feature-rich chess application built using Flutter. This project aims to provi
 - **Beautiful UI**: Designed with an intuitive and visually appealing interface.
 - **Legal Move Validation**: Ensures only valid chess moves are allowed.
 - **Customizable Board**: Change themes and personalize your game.
-- **Sound Effects**: Immerse yourself with in-game audio feedback.
 
 ## Screenshots
 
-![Home Screen](assets/screenshots/home_screen.png)
-![Gameplay Screen](assets/screenshots/gameplay_screen.png)
+![Game_Board Screen](images/screenshots/gameboard_screen.png)
+![Gameplay Screen](images/screenshots/gameplay_screen.png)
 
 ## Getting Started
 
