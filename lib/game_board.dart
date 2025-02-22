@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/components/dead_piece.dart';
-import 'package:myapp/components/piece.dart';
-import 'package:myapp/components/squares.dart';
-import 'package:myapp/helper/helper_methods.dart';
-import 'package:myapp/values/colors.dart';
+
+import 'components/dead_piece.dart';
+import 'components/piece.dart';
+import 'components/squares.dart';
+import 'helper/helper_methods.dart';
+import 'values/colors.dart';
 
 class GameBoard extends StatefulWidget {
   const GameBoard({super.key});

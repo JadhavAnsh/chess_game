@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/components/piece.dart';
-import 'package:myapp/values/colors.dart';
+
+import '../values/colors.dart';
+import 'piece.dart';
 
 class Squares extends StatelessWidget {
   final bool isWhite;
