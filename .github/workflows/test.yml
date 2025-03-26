@@ -1,0 +1,30 @@
+name: Run Tests
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Install Dependencies
+        run: npm install # or pip install -r requirements.txt
+
+      - name: Fetch Test Cases from n8n
+        run: |
+          curl -X POST "https://api-inference.huggingface.co/models/microsoft/codebert" \
+          -H "Authorization: Bearer ${{ secrets.HF_API_KEY }}" \
+          -H "Content-Type: application/json" \
+          -d '{"inputs": "Generate test cases for the following code:\n<CODE_SNIPPET>"}' \
+          -o test_cases.json
+
+      - name: Run Tests
+        run: npm test # Modify based on the test framework
+
+      - name: Report Results
+        if: failure()
+        run: echo "Test Failed, Rolling Back!" && git revert HEAD
